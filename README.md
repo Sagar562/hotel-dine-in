@@ -26,6 +26,12 @@ Hotel Dine-In is a web-based application that allows users to reserve tables at 
 ### Restaurant Registration
 - **Owner Registration**: Restaurant owners can register their business on the platform to manage bookings, reservations, and more.
 
+- ### Process:
+1. **Pending Status:** When a new restaurant is added, it is initially in the "Pending" status.
+2. **Admin Approval:** An admin can review and approve the restaurant. Upon approval, the restaurant’s `admin_approved` field is set to `TRUE`.
+3. **Active Status:** After approval, the restaurant’s status is updated to **Active**. Only restaurants with a status of **Active** and `admin_approved = TRUE` are displayed to users.
+4. **Visibility:** Restaurants that are not yet approved (status "Pending") will not be visible to users.
+
 ## Installation
 
 1. **Clone the repository**:
